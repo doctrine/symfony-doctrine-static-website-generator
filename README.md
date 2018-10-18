@@ -343,6 +343,7 @@ After you run `php bin/console doctrine:build-website` you will see the followin
     </head>
     <body>
         <h1>Test</h1>
-<p>We are in a Symfony Flex application!</p>    </body>
+        <p>We are in a Symfony Flex application!</p>
+    </body>
 </html>
 ```
