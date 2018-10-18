@@ -1,0 +1,6 @@
+/.env
+/public/bundles/
+/var/
+/vendor/
+/build-dev/
+
