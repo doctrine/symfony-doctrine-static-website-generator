@@ -4,6 +4,13 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    doctrine.static_website.title: Symfony & Doctrine Static Website
+    doctrine.static_website.subtitle: The Symfony & Doctrine Static Website Generator for PHP
+    doctrine.static_website.url: http://localhost
+    doctrine.static_website.keywords: [php, website, builder, doctrine, mapper, object, controller, route]
+    doctrine.static_website.description: The Symfony & Doctrine Static Website Generator for PHP
+    doctrine.static_website.google_analytics_tracking_id: ""
+
     doctrine.static_website.routes:
         homepage:
             path: /index.html

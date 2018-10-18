@@ -273,3 +273,76 @@ class UserRequests
 ```
 
 For every user returned by the `getUsers` method, a `/user/{username}.html` file will be generated.
+
+## New Flex Application
+
+You can also get started fresh with a brand new Flex application. I would love to make this a Symfony Flex recipe
+but for now you have to do it all manually but it is only a few steps.
+
+First create a brand new Flex application:
+
+    $ composer create-project symfony/skeleton:4.1.* my-project
+    $ cd my-project
+
+Now install the packages needed for the Doctrine Static Website Generator:
+
+    $ composer require doctrine/skeleton-mapper
+    $ composer require doctrine/rst-parser
+    $ composer require doctrine/static-website-generator
+    $ composer require doctrine/doctrine-skeleton-mapper-bundle
+    $ composer require doctrine/doctrine-static-website-generator-bundle
+
+Add `DoctrineSkeletonMapperBundle` and `DoctrineStaticWebsiteGeneratorBundle` to the `config/bundles.php`
+file to enable the bundles:
+
+```php
+<?php
+
+return [
+    Symfony\Bundle\FrameworkBundle\FrameworkBundle::class => ['all' => true],
+    Doctrine\Bundle\DoctrineSkeletonMapperBundle\DoctrineSkeletonMapperBundle::class => ['all' => true],
+    Doctrine\Bundle\DoctrineStaticWebsiteGeneratorBundle\DoctrineStaticWebsiteGeneratorBundle::class => ['all' => true],
+];
+```
+
+Create the following directories:
+
+    $ mkdir source            # source files
+    $ mkdir templates         # twig templates
+    $ mkdir templates/layouts # twig layout files
+
+Create `templates/layouts/default.html.twig` and place the following code in it:
+
+```html
+<html>
+    <head>
+        <title>{{ site.title }}</title>
+    </head>
+    <body>
+        {% block content '' %}
+    </body>
+</html>
+```
+
+Create your first file in `source` named `index.md` and place the following content inside:
+
+```md
+Test
+====
+
+We are in a Symfony Flex application!
+```
+
+After you run `php bin/console doctrine:build-website` you will see the following file in the
+`build-dev` directory:
+
+```html
+<html>
+    <head>
+        <title>Symfony &amp; Doctrine Static Website</title>
+    </head>
+    <body>
+        <h1>Test</h1>
+<p>We are in a Symfony Flex application!</p>    </body>
+</html>
+```
