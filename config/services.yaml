@@ -45,16 +45,6 @@ services:
             - 'App\Repositories\UserRepository'
             - 'App\Models\User'
 
-    App\DataSources\Users: ~
-
-    App\Requests\UserRequests:
-        arguments:
-            - '@App\Repositories\UserRepository'
-
-    App\Controller\UserController:
-        arguments:
-            - '@App\Repositories\UserRepository'
-
     Doctrine\StaticWebsiteGenerator\Controller\ControllerProvider:
         arguments:
             -
