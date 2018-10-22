@@ -18,10 +18,10 @@
         "version": "v2.9.0"
     },
     "doctrine/doctrine-skeleton-mapper-bundle": {
-        "version": "dev-master"
+        "version": "0.0.1"
     },
     "doctrine/doctrine-static-website-generator-bundle": {
-        "version": "dev-master"
+        "version": "0.0.1"
     },
     "doctrine/event-manager": {
         "version": "v1.0.0"
@@ -42,13 +42,13 @@
         "version": "v1.0.0"
     },
     "doctrine/rst-parser": {
-        "version": "dev-master"
+        "version": "0.0.1"
     },
     "doctrine/skeleton-mapper": {
-        "version": "1.0.x-dev"
+        "version": "0.0.1"
     },
     "doctrine/static-website-generator": {
-        "version": "dev-master"
+        "version": "0.0.1"
     },
     "erusev/parsedown": {
         "version": "1.7.1"

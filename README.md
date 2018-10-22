@@ -284,12 +284,8 @@ First create a brand new Flex application:
     $ composer create-project symfony/skeleton:4.1.* my-project
     $ cd my-project
 
-Now install the packages needed for the Doctrine Static Website Generator:
+Now just install the `doctrine/doctrine-static-website-generator-bundle` package:
 
-    $ composer require doctrine/skeleton-mapper
-    $ composer require doctrine/rst-parser
-    $ composer require doctrine/static-website-generator
-    $ composer require doctrine/doctrine-skeleton-mapper-bundle
     $ composer require doctrine/doctrine-static-website-generator-bundle
 
 Add `DoctrineSkeletonMapperBundle` and `DoctrineStaticWebsiteGeneratorBundle` to the `config/bundles.php`
